@@ -1,0 +1,265 @@
+/* Reset Css */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 62.5%;
+    background-color: #232830;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+/* Main Css */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    font-size: 2.4rem;
+}
+
+#navbar #navbar_left a, #navbar_right a {
+    color: #ffff;
+    margin: 1rem
+}
+
+#navbar #navbar_left a:nth-child(2) {
+    display: none;
+    cursor: pointer;
+}
+
+#main_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main_1 img {
+    user-select: none;
+    padding: 1.5rem;
+}
+
+#main_1 h1, #main_1 > h3 {
+    padding: 1.5rem;
+}
+
+#main_1 h1 {
+    color: #FF7575;
+    font-size: 7.1rem;
+    font-style: italic;
+    font-family: 'Recursive', sans-serif;
+    text-align: center;
+}
+
+#main_1 h3 {
+    text-align: center;
+    font-size: 2.9rem;
+    color: #FFFFFF;
+}
+
+.main_line {
+    width: 100%;
+    border: 2px solid #4D4D4D;
+    height: 0px;
+    opacity: 0.2;
+    margin: 5rem 0 1rem;
+}
+
+#main_2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main_2_left_svg {
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: #232830;
+    font-size: 2rem;
+}
+
+#main_2 a {
+    color: #909090;
+    font-size: 2rem;
+    font-family: 'Recursive', sans-serif;
+    margin: 0 0.5rem;
+    font-style: italic;
+}
+
+#main_2_right {
+    text-align: center;
+}
+
+#main_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 10rem;
+    flex-direction: column;
+}
+
+#main_3 .main_3_cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#main_3 .main_3_cards .main_3_card {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2.2rem;
+    cursor: pointer;
+}
+
+#main_3 .main_3_cards .main_3_card h2 {
+    font-size: 1.9rem;
+    color: #0F1217;
+    padding: 1rem;
+}
+
+#main_3 .main_3_cards .main_3_card p {
+    font-size: 1.6rem;
+    padding: 1rem;
+    color: #0F1217;
+}
+
+.main_3_card_detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_3_card_detail b, span {
+    font-size: 1.6rem;
+    color: #0F1217;
+}
+
+#main_4 {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#main_4 a {
+    color: #909090;
+    font-size: 2.5rem;
+    font-family: 'Recursive', sans-serif;
+    padding: 2rem;
+    font-style: italic;
+}
+
+#main_4 a:not(:first-child, :last-child) {
+    font-weight: 700;
+    transition: all 300ms;
+}
+
+#main_4 a:not(:first-child, :last-child):hover {
+    color: #FF7575;
+    text-decoration: wavy;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+
+#footer_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_left a:first-child {
+    font-size: 3rem;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+#footer_left a:nth-child(2) {
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+    background-color: #4699E0;
+    border-radius: 0.5rem;
+    color: #FFFFFF;
+}
+
+#footer_right a {
+    font-size: 1.9rem;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    background-color: #4699E0;
+    border-radius: 0.5rem;
+}
+
+/* Responsive Css */
+
+@media (max-width: 575px) {
+    #navbar #navbar_left a:nth-child(2) {
+        display: contents;
+    }
+
+    #navbar_right {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 640px) {
+    #main_4 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 830px) {
+    #main_1 h1 {
+        font-size: 5rem;
+    }
+
+    #main_1 h3 {
+        font-size: 2.5rem;
+    }
+
+    #main_3 .main_3_cards {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (min-width: 830px) and (max-width: 1230px) {
+    #main_1 h1 {
+        font-size: 6rem;
+    }
+
+    #main_1 h3 {
+        font-size: 2.7rem;
+    }
+
+    #main_3 .main_3_cards {
+        grid-template-columns: auto auto;
+    }
+}
